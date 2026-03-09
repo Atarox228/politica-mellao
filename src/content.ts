@@ -1,3 +1,4 @@
+import politica from "./assets/politica.webp"
 /**
  * content.ts
  * ──────────────────────────────────────────────────────────────
@@ -13,7 +14,7 @@ export const SITE = {
   tagline: 'Liderazgo Argentino',
   description:
     'Ariana Mellao, liderazgo argentino para una nueva etapa. Producción Nacional, Transparencia Institucional y Bienestar Ciudadano.',
-  heroPhoto: '/politica.jpeg',       // ruta relativa a /public
+  heroPhoto: politica,  
   heroPhotoAlt: 'Ariana Mellao',
 } as const;
 
