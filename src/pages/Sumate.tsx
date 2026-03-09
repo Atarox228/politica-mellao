@@ -1,106 +1,100 @@
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Users, Heart, HandHeart } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { Users, Heart, Share2, Twitter, Instagram } from 'lucide-react';
+import PageLayout from '../components/PageLayout';
+import { SUMATE, SOCIAL, PRESS } from '../content';
+
+const wayIcons = { participar: Users, colaborar: Heart, difundir: Share2 } as const;
 
 export default function Sumate() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
+    <PageLayout title={SUMATE.pageTitle} label={SUMATE.pageLabel}>
+      <div style={{ fontFamily: 'var(--font-body)' }}>
+        <p className="text-xl text-gray-700 leading-relaxed mb-14 text-center">{SUMATE.intro}</p>
 
-      <main className="flex-grow">
-        <div className="relative h-64 md:h-96 bg-gradient-to-r from-[#1a5f5f] to-[#2a7f7f] flex items-center justify-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white">Sumate</h1>
+        {/* Three pillars */}
+        <div className="grid md:grid-cols-3 gap-px bg-gray-200 mb-14">
+          {SUMATE.ways.map(({ key, title, description }) => {
+            const Icon = wayIcons[key];
+            return (
+              <div key={key} className="bg-[#fafaf8] p-8 flex flex-col items-center text-center gap-4">
+                <div className="w-14 h-14 bg-[#1a5f5f]/10 flex items-center justify-center">
+                  <Icon className="text-[#1a5f5f]" size={28} />
+                </div>
+                <h3
+                  className="text-lg font-bold text-[#1a5f5f]"
+                  style={{ fontFamily: 'var(--font-display)' }}
+                >
+                  {title}
+                </h3>
+                <p className="text-gray-500 text-sm">{description}</p>
+              </div>
+            );
+          })}
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <div className="prose prose-lg max-w-none">
-            <p className="text-gray-700 leading-relaxed mb-12 text-xl text-center">
-              Argentina necesita el compromiso de todos. Unite a nuestro proyecto para construir juntos
-              el país que merecemos.
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="flex justify-center mb-4">
-                  <Users className="text-[#1a5f5f]" size={48} />
+        {/* Formas de participar */}
+        <section className="mb-14">
+          <h2
+            className="text-2xl font-bold text-[#1a5f5f] mb-6"
+            style={{ fontFamily: 'var(--font-display)' }}
+          >
+            Formas de participar
+          </h2>
+          <div className="divide-y divide-gray-200 border border-gray-200">
+            {SUMATE.formas.map(({ key, desc }) => (
+              <div key={key} className="flex gap-4 p-6">
+                <div className="w-2 h-2 rounded-full bg-[#c8a96e] mt-2 flex-shrink-0" />
+                <div>
+                  <span className="font-semibold text-[#1a5f5f]">{key}: </span>
+                  <span className="text-gray-700">{desc}</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#1a5f5f] mb-2">Participá</h3>
-                <p className="text-gray-600">Formá parte de nuestros encuentros y actividades</p>
               </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="flex justify-center mb-4">
-                  <Heart className="text-[#1a5f5f]" size={48} />
-                </div>
-                <h3 className="text-xl font-bold text-[#1a5f5f] mb-2">Colaborá</h3>
-                <p className="text-gray-600">Tu aporte hace la diferencia</p>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <div className="flex justify-center mb-4">
-                  <HandHeart className="text-[#1a5f5f]" size={48} />
-                </div>
-                <h3 className="text-xl font-bold text-[#1a5f5f] mb-2">Difundí</h3>
-                <p className="text-gray-600">Compartí nuestras propuestas</p>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold text-[#1a5f5f] mb-6 mt-12">¿Por qué sumarte?</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Porque creemos en un país mejor para todos. Porque sabemos que el cambio es posible si trabajamos
-              juntos. Porque cada argentino tiene el poder de transformar su realidad y la de su comunidad.
-            </p>
-
-            <h2 className="text-3xl font-bold text-[#1a5f5f] mb-6 mt-12">Formas de participar</h2>
-            <ul className="space-y-4 mb-8">
-              <li className="text-gray-700 leading-relaxed">
-                <strong className="text-[#1a5f5f]">Militancia activa:</strong> Participá en nuestras actividades
-                territoriales y eventos políticos.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong className="text-[#1a5f5f]">Voluntariado:</strong> Colaborá con tu tiempo y habilidades
-                en proyectos comunitarios.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong className="text-[#1a5f5f]">Difusión:</strong> Ayudanos a comunicar nuestras propuestas
-                en redes sociales y tu comunidad.
-              </li>
-              <li className="text-gray-700 leading-relaxed">
-                <strong className="text-[#1a5f5f]">Aportes:</strong> Tu contribución económica nos permite
-                sostener nuestras actividades.
-              </li>
-            </ul>
-
-            <div className="bg-[#1a5f5f] text-white p-8 rounded-lg mt-12">
-              <h3 className="text-2xl font-bold mb-4">Contacto</h3>
-              <p className="mb-4">
-                Para sumarte o consultarnos, escribinos a través de nuestras redes sociales:
-              </p>
-              <div className="space-y-2">
-                <p>
-                  <strong>Twitter:</strong> @arianamellao
-                </p>
-                <p>
-                  <strong>Instagram:</strong> @arianamellaoo
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
+        </section>
 
-          <div className="mt-12">
-            <Link
-              to="/"
-              className="inline-flex items-center bg-[#1a5f5f] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#2a7f7f] transition-colors"
+        {/* Contact box */}
+        <section className="bg-[#1a5f5f] p-10">
+          <h2
+            className="text-2xl font-bold text-white mb-2"
+            style={{ fontFamily: 'var(--font-display)' }}
+          >
+            Contacto
+          </h2>
+          <div className="h-0.5 w-12 bg-[#c8a96e] mb-6" />
+          <p className="text-gray-300 mb-8 leading-relaxed">
+            Para sumarte o consultarnos, escribinos a través de nuestras redes sociales:
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href={SOCIAL.twitter.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 border border-white/30 px-6 py-3 text-white text-sm tracking-wide hover:bg-white/10 transition-colors"
             >
-              <ArrowLeft className="mr-2" size={20} />
-              Volver a Inicio
-            </Link>
+              <Twitter size={16} />
+              {SOCIAL.twitter.handle}
+            </a>
+            <a
+              href={SOCIAL.instagram.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 border border-white/30 px-6 py-3 text-white text-sm tracking-wide hover:bg-white/10 transition-colors"
+            >
+              <Instagram size={16} />
+              {SOCIAL.instagram.handle}
+            </a>
+            <a
+              href={PRESS.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 border border-[#25d366]/40 px-6 py-3 text-[#25d366] text-sm tracking-wide hover:bg-[#25d366]/10 transition-colors"
+            >
+              <span className="font-bold text-xs">WA</span>
+              {PRESS.displayNumber}
+            </a>
           </div>
-        </div>
-      </main>
-
-      <Footer />
-    </div>
+        </section>
+      </div>
+    </PageLayout>
   );
 }

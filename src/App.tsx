@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import QuienSoy from './pages/QuienSoy';
 import ProduccionNacional from './pages/ProduccionNacional';
@@ -6,10 +7,13 @@ import TransparenciaInstitucional from './pages/TransparenciaInstitucional';
 import BienestarCiudadano from './pages/BienestarCiudadano';
 import Medios from './pages/Medios';
 import Sumate from './pages/Sumate';
+import NotFound from './pages/NotFound';
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
+      {/* Resetea el scroll al inicio en cada cambio de ruta */}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quien-soy" element={<QuienSoy />} />
@@ -18,9 +22,8 @@ function App() {
         <Route path="/bienestar-ciudadano" element={<BienestarCiudadano />} />
         <Route path="/medios" element={<Medios />} />
         <Route path="/sumate" element={<Sumate />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
 }
-
-export default App;

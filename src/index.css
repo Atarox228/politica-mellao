@@ -1,3 +1,92 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #1a5f5f;
+    --color-primary-dark: #124444;
+    --color-primary-light: #2a7f7f;
+    --color-accent: #c8a96e;
+    --color-text: #1c1c1c;
+    --color-muted: #6b7280;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Serif 4', Georgia, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    background-color: #fafaf8;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-[#1a5f5f] text-white font-semibold py-3 px-8 rounded-none
+           border-2 border-[#1a5f5f] hover:bg-transparent hover:text-[#1a5f5f] 
+           transition-all duration-300 tracking-wider uppercase text-sm;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 bg-transparent text-[#1a5f5f] font-semibold py-3 px-8 
+           rounded-none border-2 border-[#1a5f5f] hover:bg-[#1a5f5f] hover:text-white
+           transition-all duration-300 tracking-wider uppercase text-sm;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.25em] uppercase text-[#c8a96e];
+  }
+
+  .divider-ornament {
+    @apply flex items-center gap-4 my-8;
+  }
+
+  .divider-ornament::before,
+  .divider-ornament::after {
+    content: '';
+    @apply flex-1 h-px bg-gray-200;
+  }
+}
+
+/* Page transition */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+/* Hero text reveal */
+@keyframes revealText {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-line-1 { animation: revealText 0.6s ease-out 0.1s both; }
+.hero-line-2 { animation: revealText 0.6s ease-out 0.3s both; }
+.hero-line-3 { animation: revealText 0.6s ease-out 0.5s both; }
+.hero-line-4 { animation: revealText 0.6s ease-out 0.7s both; }
