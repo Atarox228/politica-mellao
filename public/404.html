@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      // Guarda la URL actual y redirige al index
+      const path = window.location.pathname + window.location.search;
+      sessionStorage.setItem('redirect', path);
+      window.location.replace('/nombre-del-repo/');
+    </script>
+  </head>
+</html>
