@@ -4,7 +4,7 @@ import { SITE, SOCIAL, NAV_LINKS, PRESS } from '../content';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#124444] text-white">
+    <footer className="bg-[#1c2b40] text-white">
       {/* Gold accent line */}
       <div className="h-1 bg-[#c8a96e]" />
 

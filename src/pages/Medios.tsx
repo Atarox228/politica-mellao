@@ -18,11 +18,11 @@ export default function Medios() {
         <div className="grid md:grid-cols-3 gap-px bg-gray-200 mb-14">
           {mediaTypes.map(({ icon: Icon, title, description }) => (
             <div key={title} className="bg-[#fafaf8] p-8 flex flex-col items-center text-center gap-4">
-              <div className="w-14 h-14 bg-[#1a5f5f]/10 flex items-center justify-center">
-                <Icon className="text-[#1a5f5f]" size={28} />
+              <div className="w-14 h-14 bg-[#1c2b62]/10 flex items-center justify-center">
+                <Icon className="text-[#1c2b62]" size={28} />
               </div>
               <h3
-                className="text-lg font-bold text-[#1a5f5f]"
+                className="text-lg font-bold text-[#1c2b62]"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 {title}
@@ -35,7 +35,7 @@ export default function Medios() {
         {/* Appearances list — populated from content.ts */}
         <section>
           <h2
-            className="text-2xl font-bold text-[#1a5f5f] mb-6"
+            className="text-2xl font-bold text-[#1c2b62] mb-6"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Últimas apariciones
@@ -54,7 +54,7 @@ export default function Medios() {
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#1a5f5f] hover:underline font-medium"
+                      className="text-[#1c2b62] hover:underline font-medium"
                     >
                       {title}
                     </a>
@@ -74,13 +74,13 @@ export default function Medios() {
         {/* Press contact note */}
         <div className="mt-10 border-l-4 border-[#c8a96e] pl-6 py-2 bg-[#fffdf7]">
           <p className="text-gray-600 text-sm leading-relaxed">
-            <strong className="text-[#1a5f5f]">{PRESS.label}:</strong>{' '}
+            <strong className="text-[#1c2b62]">{PRESS.label}:</strong>{' '}
             {MEDIOS.pressNote}{' '}
             <a
               href={PRESS.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#1a5f5f] underline hover:no-underline"
+              className="text-[#1c2b62] underline hover:no-underline"
             >
               {PRESS.displayNumber}
             </a>

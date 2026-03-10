@@ -4,9 +4,12 @@
 
 @layer base {
   :root {
-    --color-primary: #1a5f5f;
-    --color-primary-dark: #124444;
-    --color-primary-light: #2a7f7f;
+    --color-primary: #1c2b62;
+    --color-primary-dark: #1c2b40;
+    --color-primary-light: #1c2b90; 
+    /* --color-primary: #1a5f5f; */
+    /* --color-primary-dark: #124444; */
+    /* --color-primary-light: #2a7f7f; */
     --color-accent: #c8a96e;
     --color-text: #1c1c1c;
     --color-muted: #6b7280;
@@ -32,14 +35,14 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-[#1a5f5f] text-white font-semibold py-3 px-8 rounded-none
-           border-2 border-[#1a5f5f] hover:bg-transparent hover:text-[#1a5f5f] 
+    @apply inline-flex items-center gap-2 bg-[#1c2b62] text-white font-semibold py-3 px-8 rounded-none
+           border-2 border-[#1c2b62] hover:bg-transparent hover:text-[#1c2b62] 
            transition-all duration-300 tracking-wider uppercase text-sm;
   }
 
   .btn-outline {
-    @apply inline-flex items-center gap-2 bg-transparent text-[#1a5f5f] font-semibold py-3 px-8 
-           rounded-none border-2 border-[#1a5f5f] hover:bg-[#1a5f5f] hover:text-white
+    @apply inline-flex items-center gap-2 bg-transparent text-[#1c2b62] font-semibold py-3 px-8 
+           rounded-none border-2 border-[#1c2b62] hover:bg-[#1c2b62] hover:text-white
            transition-all duration-300 tracking-wider uppercase text-sm;
   }
 

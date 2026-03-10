@@ -11,7 +11,7 @@ export default function NotFound() {
         <div className="text-center">
           <p className="section-label mb-4">Error 404</p>
           <h1
-            className="text-6xl md:text-8xl font-black text-[#1a5f5f] mb-6"
+            className="text-6xl md:text-8xl font-black text-[#1c2b62] mb-6"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Página no encontrada

@@ -27,7 +27,7 @@ export default function Header() {
         }`}
       >
         {/* Top accent bar */}
-        <div className="h-1 bg-[#1a5f5f]" />
+        <div className="h-1 bg-[#1c2b62]" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
@@ -38,7 +38,7 @@ export default function Header() {
               aria-label={`Inicio — ${SITE.name}`}
             >
               <span
-                className="text-xl md:text-2xl font-bold text-[#1a5f5f] tracking-tight transition-colors group-hover:text-[#124444]"
+                className="text-xl md:text-2xl font-bold text-[#1c2b62] tracking-tight transition-colors group-hover:text-[#1c2b40]"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 {SITE.name}
@@ -56,8 +56,8 @@ export default function Header() {
                   to={to}
                   className={`text-sm tracking-wide transition-colors relative py-1 ${
                     location.pathname === to
-                      ? 'text-[#1a5f5f] font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#c8a96e]'
-                      : 'text-gray-600 hover:text-[#1a5f5f]'
+                      ? 'text-[#1c2b62] font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#c8a96e]'
+                      : 'text-gray-600 hover:text-[#1c2b62]'
                   }`}
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
@@ -74,7 +74,7 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Twitter de ${SITE.name}`}
-                  className="text-gray-400 hover:text-[#1a5f5f] transition-colors"
+                  className="text-gray-400 hover:text-[#1c2b62] transition-colors"
                 >
                   <Twitter size={18} />
                 </a>
@@ -83,7 +83,7 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Instagram de ${SITE.name}`}
-                  className="text-gray-400 hover:text-[#1a5f5f] transition-colors"
+                  className="text-gray-400 hover:text-[#1c2b62] transition-colors"
                 >
                   <Instagram size={18} />
                 </a>
@@ -91,7 +91,7 @@ export default function Header() {
 
               {/* Hamburger — mobile/tablet */}
               <button
-                className="lg:hidden p-2 text-[#1a5f5f] hover:bg-gray-100 rounded transition-colors"
+                className="lg:hidden p-2 text-[#1c2b62] hover:bg-gray-100 rounded transition-colors"
                 onClick={() => setMenuOpen((v) => !v)}
                 aria-expanded={menuOpen}
                 aria-controls="mobile-menu"
@@ -120,8 +120,8 @@ export default function Header() {
               to={to}
               className={`py-4 text-lg border-b border-gray-100 transition-colors ${
                 location.pathname === to
-                  ? 'text-[#1a5f5f] font-semibold'
-                  : 'text-gray-700 hover:text-[#1a5f5f]'
+                  ? 'text-[#1c2b62] font-semibold'
+                  : 'text-gray-700 hover:text-[#1c2b62]'
               }`}
               style={{ fontFamily: 'var(--font-display)' }}
             >
@@ -134,7 +134,7 @@ export default function Header() {
               href={SOCIAL.twitter.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-[#1a5f5f] transition-colors"
+              className="text-gray-400 hover:text-[#1c2b62] transition-colors"
             >
               <Twitter size={22} />
             </a>
@@ -142,7 +142,7 @@ export default function Header() {
               href={SOCIAL.instagram.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-[#1a5f5f] transition-colors"
+              className="text-gray-400 hover:text-[#1c2b62] transition-colors"
             >
               <Instagram size={22} />
             </a>

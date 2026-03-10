@@ -75,6 +75,7 @@ export const HOME = {
       title: '¿Quién soy?',
       description:
         'Trayectoria, valores y visión de una dirigente comprometida con el futuro de Argentina.',
+      highlight: false,
     },
     {
       to: '/produccion-nacional',
@@ -82,6 +83,7 @@ export const HOME = {
       title: 'Producción Nacional',
       description:
         'PyMEs, desarrollo regional e innovación tecnológica como motores del progreso.',
+        highlight: false,
     },
     {
       to: '/transparencia-institucional',
@@ -89,6 +91,7 @@ export const HOME = {
       title: 'Transparencia Institucional',
       description:
         'Gobierno abierto, pluralismo sindical y rendición de cuentas sin privilegios.',
+        highlight: false,
     },
     {
       to: '/bienestar-ciudadano',
@@ -96,6 +99,7 @@ export const HOME = {
       title: 'Bienestar Ciudadano',
       description:
         'Dignidad, salud comunitaria y desarrollo integral para cada argentino.',
+        highlight: false,
     },
     {
       to: '/medios',
@@ -103,6 +107,7 @@ export const HOME = {
       title: 'Medios',
       description:
         'Entrevistas, artículos y apariciones en prensa, televisión y radio.',
+        highlight: false,
     },
     {
       to: '/sumate',

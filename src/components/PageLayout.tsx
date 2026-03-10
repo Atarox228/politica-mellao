@@ -23,7 +23,7 @@ export default function PageLayout({
 
       <main className="flex-grow page-enter">
         {/* Hero banner */}
-        <div className="relative overflow-hidden bg-[#1a5f5f]">
+        <div className="relative overflow-hidden bg-[#1c2b62]">
           {/* Subtle texture overlay */}
           <div
             className="absolute inset-0 opacity-10"

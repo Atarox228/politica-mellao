@@ -12,12 +12,12 @@ export default function BienestarCiudadano() {
         <div className="border border-gray-200">
           {BIENESTAR.pillars.map(({ num, title, paragraphs }) => (
             <div key={num} className="grid md:grid-cols-[80px_1fr] border-b border-gray-200 last:border-b-0">
-              <div className="bg-[#1a5f5f] flex items-start justify-center pt-8 px-4">
+              <div className="bg-[#1c2b62] flex items-start justify-center pt-8 px-4">
                 <span className="text-[#c8a96e] text-sm font-bold tracking-widest">{num}</span>
               </div>
               <div className="p-8">
                 <h2
-                  className="text-2xl font-bold text-[#1a5f5f] mb-4"
+                  className="text-2xl font-bold text-[#1c2b62] mb-4"
                   style={{ fontFamily: 'var(--font-display)' }}
                 >
                   {title}

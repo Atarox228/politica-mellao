@@ -16,11 +16,11 @@ export default function Sumate() {
             const Icon = wayIcons[key];
             return (
               <div key={key} className="bg-[#fafaf8] p-8 flex flex-col items-center text-center gap-4">
-                <div className="w-14 h-14 bg-[#1a5f5f]/10 flex items-center justify-center">
-                  <Icon className="text-[#1a5f5f]" size={28} />
+                <div className="w-14 h-14 bg-[#1c2b62]/10 flex items-center justify-center">
+                  <Icon className="text-[#1c2b62]" size={28} />
                 </div>
                 <h3
-                  className="text-lg font-bold text-[#1a5f5f]"
+                  className="text-lg font-bold text-[#1c2b62]"
                   style={{ fontFamily: 'var(--font-display)' }}
                 >
                   {title}
@@ -34,7 +34,7 @@ export default function Sumate() {
         {/* Formas de participar */}
         <section className="mb-14">
           <h2
-            className="text-2xl font-bold text-[#1a5f5f] mb-6"
+            className="text-2xl font-bold text-[#1c2b62] mb-6"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Formas de participar
@@ -44,7 +44,7 @@ export default function Sumate() {
               <div key={key} className="flex gap-4 p-6">
                 <div className="w-2 h-2 rounded-full bg-[#c8a96e] mt-2 flex-shrink-0" />
                 <div>
-                  <span className="font-semibold text-[#1a5f5f]">{key}: </span>
+                  <span className="font-semibold text-[#1c2b62]">{key}: </span>
                   <span className="text-gray-700">{desc}</span>
                 </div>
               </div>
@@ -53,7 +53,7 @@ export default function Sumate() {
         </section>
 
         {/* Contact box */}
-        <section className="bg-[#1a5f5f] p-10">
+        <section className="bg-[#1c2b62] p-10">
           <h2
             className="text-2xl font-bold text-white mb-2"
             style={{ fontFamily: 'var(--font-display)' }}

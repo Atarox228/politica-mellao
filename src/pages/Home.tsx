@@ -11,7 +11,7 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* ── Hero ── */}
-        <section className="relative overflow-hidden bg-[#1a5f5f]">
+        <section className="relative overflow-hidden bg-[#1c2b62]">
           <div
             className="absolute inset-0 opacity-[0.07]"
             style={{
@@ -78,7 +78,7 @@ export default function Home() {
             <div className="mb-12">
               <p className="section-label mb-2">Agenda política</p>
               <h2
-                className="text-3xl md:text-4xl font-bold text-[#1a5f5f]"
+                className="text-3xl md:text-4xl font-bold text-[#1c2b62]"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 Propuestas
@@ -92,7 +92,7 @@ export default function Home() {
                   to={to}
                   className={`group relative flex flex-col p-8 transition-colors duration-300 ${
                     highlight
-                      ? 'bg-[#1a5f5f] text-white'
+                      ? 'bg-[#1c2b62] text-white'
                       : 'bg-[#fafaf8] hover:bg-white'
                   }`}
                 >
@@ -101,7 +101,7 @@ export default function Home() {
                   </span>
                   <h3
                     className={`text-xl font-bold mb-3 leading-tight ${
-                      highlight ? 'text-white' : 'text-[#1a5f5f]'
+                      highlight ? 'text-white' : 'text-[#1c2b62]'
                     }`}
                     style={{ fontFamily: 'var(--font-display)' }}
                   >
@@ -117,7 +117,7 @@ export default function Home() {
                   </p>
                   <div
                     className={`mt-6 flex items-center gap-2 text-xs tracking-widest uppercase font-semibold ${
-                      highlight ? 'text-[#c8a96e]' : 'text-[#1a5f5f]'
+                      highlight ? 'text-[#c8a96e]' : 'text-[#1c2b62]'
                     }`}
                   >
                     Leer más
@@ -133,7 +133,7 @@ export default function Home() {
         </section>
 
         {/* ── Quote strip ── */}
-        <section className="bg-[#124444] py-16 md:py-20">
+        <section className="bg-[#1c2b40] py-16 md:py-20">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="w-12 h-1 bg-[#c8a96e] mx-auto mb-8" />
             <blockquote

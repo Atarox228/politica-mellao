@@ -9,7 +9,7 @@ export default function QuienSoy() {
           <section key={title}>
             {i > 0 && <div className="w-full h-px bg-gray-200 mb-12" />}
             <h2
-              className="text-2xl md:text-3xl font-bold text-[#1a5f5f] mb-5"
+              className="text-2xl md:text-3xl font-bold text-[#1c2b62] mb-5"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               {title}
